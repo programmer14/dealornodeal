@@ -46,26 +46,26 @@
         <Label Name="LabelNellzeh" Grid.Row="8" Grid.Column="3" Content="1000000$" FontSize="50" HorizontalAlignment="Center"></Label>
         <Label Name="Labeltweeeni" Grid.Row="9" Grid.Column="3" Content="5000000$" FontSize="50" HorizontalAlignment="Center"></Label>
 
-        <Image Grid.Column="1" Grid.Row="0" Source="koffer.jpg"></Image>
-        <Image Grid.Column="1" Grid.Row="1" Source="koffer.jpg"></Image>
-        <Image Grid.Column="1" Grid.Row="2" Source="koffer.jpg"></Image>
-        <Image Grid.Column="1" Grid.Row="3" Source="koffer.jpg"></Image>
-        <Image Grid.Column="1" Grid.Row="4" Source="koffer.jpg"></Image>
-        <Image Grid.Column="1" Grid.Row="5" Source="koffer.jpg"></Image>
-        <Image Grid.Column="1" Grid.Row="6" Source="koffer.jpg"></Image>
-        <Image Grid.Column="1" Grid.Row="7" Source="koffer.jpg"></Image>
-        <Image Grid.Column="1" Grid.Row="8" Source="koffer.jpg"></Image>
-        <Image Grid.Column="1" Grid.Row="9" Source="koffer.jpg"></Image>
-        <Image Grid.Column="2" Grid.Row="0" Source="koffer.jpg"></Image>
-        <Image Grid.Column="2" Grid.Row="1" Source="koffer.jpg"></Image>
-        <Image Grid.Column="2" Grid.Row="2" Source="koffer.jpg"></Image>
-        <Image Grid.Column="2" Grid.Row="3" Source="koffer.jpg"></Image>
-        <Image Grid.Column="2" Grid.Row="4" Source="koffer.jpg"></Image>
-        <Image Grid.Column="2" Grid.Row="5" Source="koffer.jpg"></Image>
-        <Image Grid.Column="2" Grid.Row="6" Source="koffer.jpg"></Image>
-        <Image Grid.Column="2" Grid.Row="7" Source="koffer.jpg"></Image>
-        <Image Grid.Column="2" Grid.Row="8" Source="koffer.jpg"></Image>
-        <Image Grid.Column="2" Grid.Row="9" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="0" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="1" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="2" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="3" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="4" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="5" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="6" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="7" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="8" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="9" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="0" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="1" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="2" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="3" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="4" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="5" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="6" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="7" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="8" Source="koffer.jpg"></Image>
+        <Image MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="9" Source="koffer.jpg"></Image>
         
     </Grid>
 </Window>
