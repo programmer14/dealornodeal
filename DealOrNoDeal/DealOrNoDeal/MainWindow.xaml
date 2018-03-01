@@ -5,8 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DealOrNoDeal"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="MainWindow" WindowStartupLocation="CenterScreen" Height="800" Width="1100">
+    <Grid Background="White" ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Name="LabelUno" Grid.Row="0" Grid.Column="0" Content="1$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelDuo" Grid.Row="1" Grid.Column="0" Content="5$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelTresh" Grid.Row="2" Grid.Column="0" Content="10$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelQuatorsh" Grid.Row="3" Grid.Column="0" Content="50$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelFive" Grid.Row="4" Grid.Column="0" Content="100$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelSex" Grid.Row="5" Grid.Column="0" Content="200$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelZippe" Grid.Row="6" Grid.Column="0" Content="500$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelAchht" Grid.Row="7" Grid.Column="0" Content="1000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelNell" Grid.Row="8" Grid.Column="0" Content="1500$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Labelzehner" Grid.Row="9" Grid.Column="0" Content="2000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Labelelfer" Grid.Row="0" Grid.Column="3" Content="3000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Labeltwelve" Grid.Row="1" Grid.Column="3" Content="5000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Labelthirteen" Grid.Row="2" Grid.Column="3" Content="10000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Labelfourteen" Grid.Row="3" Grid.Column="3" Content="50000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelFiveteen" Grid.Row="4" Grid.Column="3" Content="100000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelSexteen" Grid.Row="5" Grid.Column="3" Content="200000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelZippezeh" Grid.Row="6" Grid.Column="3" Content="300000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelAchtzeh" Grid.Row="7" Grid.Column="3" Content="500000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelNellzeh" Grid.Row="8" Grid.Column="3" Content="1000000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Labeltweeeni" Grid.Row="9" Grid.Column="3" Content="5000000$" FontSize="50" HorizontalAlignment="Center"></Label>
+
+        <Image Grid.Column="1" Grid.Row="0" Source="koffer.jpg"></Image>
+        <Image Grid.Column="1" Grid.Row="1" Source="koffer.jpg"></Image>
+        <Image Grid.Column="1" Grid.Row="2" Source="koffer.jpg"></Image>
+        <Image Grid.Column="1" Grid.Row="3" Source="koffer.jpg"></Image>
+        <Image Grid.Column="1" Grid.Row="4" Source="koffer.jpg"></Image>
+        <Image Grid.Column="1" Grid.Row="5" Source="koffer.jpg"></Image>
+        <Image Grid.Column="1" Grid.Row="6" Source="koffer.jpg"></Image>
+        <Image Grid.Column="1" Grid.Row="7" Source="koffer.jpg"></Image>
+        <Image Grid.Column="1" Grid.Row="8" Source="koffer.jpg"></Image>
+        <Image Grid.Column="1" Grid.Row="9" Source="koffer.jpg"></Image>
+        <Image Grid.Column="2" Grid.Row="0" Source="koffer.jpg"></Image>
+        <Image Grid.Column="2" Grid.Row="1" Source="koffer.jpg"></Image>
+        <Image Grid.Column="2" Grid.Row="2" Source="koffer.jpg"></Image>
+        <Image Grid.Column="2" Grid.Row="3" Source="koffer.jpg"></Image>
+        <Image Grid.Column="2" Grid.Row="4" Source="koffer.jpg"></Image>
+        <Image Grid.Column="2" Grid.Row="5" Source="koffer.jpg"></Image>
+        <Image Grid.Column="2" Grid.Row="6" Source="koffer.jpg"></Image>
+        <Image Grid.Column="2" Grid.Row="7" Source="koffer.jpg"></Image>
+        <Image Grid.Column="2" Grid.Row="8" Source="koffer.jpg"></Image>
+        <Image Grid.Column="2" Grid.Row="9" Source="koffer.jpg"></Image>
         
     </Grid>
 </Window>
