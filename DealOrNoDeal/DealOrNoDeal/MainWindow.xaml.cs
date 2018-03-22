@@ -46,70 +46,12 @@ namespace DealOrNoDeal
                 list = list.OrderBy(a => rnd.Next()).ToList();
                 var zahl = list.FirstOrDefault();
                 list.Remove(zahl);
-                switch (zahl)
-                {
-                    case 1:
-                        LabelUno.Foreground = Brushes.Red;
-                        break;
-                    case 5:
-                        LabelDuo.Foreground = Brushes.Red;
-                        break;
-                    case 10:
-                        LabelTresh.Foreground = Brushes.Red;
-                        break;
-                    case 50:
-                        LabelQuatorsh.Foreground = Brushes.Red;
-                        break;
-                    case 100:
-                        LabelFive.Foreground = Brushes.Red;
-                        break;
-                    case 200:
-                        LabelSex.Foreground = Brushes.Red;
-                        break;
-                    case 350:
-                        LabelZippe.Foreground = Brushes.Red;
-                        break;
-                    case 500:
-                        LabelAchht.Foreground = Brushes.Red;
-                        break;
-                    case 1000:
-                        LabelNell.Foreground = Brushes.Red;
-                        break;
-                    case 1500:
-                        Labelzehner.Foreground = Brushes.Red;
-                        break;
-                    case 2500:
-                        Labelelfer.Foreground = Brushes.Red;
-                        break;
-                    case 4000:
-                        Labeltwelve.Foreground = Brushes.Red;
-                        break;
-                    case 10000:
-                        Labelthirteen.Foreground = Brushes.Red;
-                        break;
-                    case 25000:
-                        Labelfourteen.Foreground = Brushes.Red;
-                        break;
-                    case 50000:
-                        LabelFiveteen.Foreground = Brushes.Red;
-                        break;
-                    case 100000:
-                        LabelSexteen.Foreground = Brushes.Red;
-                        break;
-                    case 250000:
-                        LabelZippezeh.Foreground = Brushes.Red;
-                        break;
-                    case 750000:
-                        LabelAchtzeh.Foreground = Brushes.Red;
-                        break;
-                    case 1500000:
-                        LabelNellzeh.Foreground = Brushes.Red;
-                        break;
-                    case 3000000:
-                        Labeltweeeni.Foreground = Brushes.Red;
-                        break;
-                }
-            }else
+
+                Label lb = (Label)FindName("Label_" + zahl);
+                lb.Foreground = Brushes.Red;
+
+            }
+            else
             {
                 if (list.FirstOrDefault() == 3000000)
                 {
@@ -146,7 +88,7 @@ namespace DealOrNoDeal
 
                 Image20.Visibility = Visibility.Hidden;
             }
-            
+
         }
         private void OnPropertyChanged(string name)
         {
