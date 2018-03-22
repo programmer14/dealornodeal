@@ -25,26 +25,26 @@
             <ColumnDefinition Width="250"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Name="LabelUno" Grid.Row="0" Grid.Column="0" Content="1$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelDuo" Grid.Row="1" Grid.Column="0" Content="5$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelTresh" Grid.Row="2" Grid.Column="0" Content="10$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelQuatorsh" Grid.Row="3" Grid.Column="0" Content="50$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelFive" Grid.Row="4" Grid.Column="0" Content="100$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelSex" Grid.Row="5" Grid.Column="0" Content="200$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelZippe" Grid.Row="6" Grid.Column="0" Content="350$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelAchht" Grid.Row="7" Grid.Column="0" Content="500$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelNell" Grid.Row="8" Grid.Column="0" Content="1000$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="Labelzehner" Grid.Row="9" Grid.Column="0" Content="1500$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="Labelelfer" Grid.Row="0" Grid.Column="3" Content="2500$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="Labeltwelve" Grid.Row="1" Grid.Column="3" Content="4000$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="Labelthirteen" Grid.Row="2" Grid.Column="3" Content="10000$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="Labelfourteen" Grid.Row="3" Grid.Column="3" Content="25000$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelFiveteen" Grid.Row="4" Grid.Column="3" Content="50000$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelSexteen" Grid.Row="5" Grid.Column="3" Content="100000$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelZippezeh" Grid.Row="6" Grid.Column="3" Content="250000$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelAchtzeh" Grid.Row="7" Grid.Column="3" Content="750000$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="LabelNellzeh" Grid.Row="8" Grid.Column="3" Content="1500000$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="Labeltweeeni" Grid.Row="9" Grid.Column="3" Content="3000000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_1" Grid.Row="0" Grid.Column="0" Content="1$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_5" Grid.Row="1" Grid.Column="0" Content="5$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_10" Grid.Row="2" Grid.Column="0" Content="10$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_50" Grid.Row="3" Grid.Column="0" Content="50$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_100" Grid.Row="4" Grid.Column="0" Content="100$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_200" Grid.Row="5" Grid.Column="0" Content="200$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_350" Grid.Row="6" Grid.Column="0" Content="350$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_500" Grid.Row="7" Grid.Column="0" Content="500$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_1000" Grid.Row="8" Grid.Column="0" Content="1000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_1500" Grid.Row="9" Grid.Column="0" Content="1500$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_2500" Grid.Row="0" Grid.Column="3" Content="2500$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_4000" Grid.Row="1" Grid.Column="3" Content="4000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_10000" Grid.Row="2" Grid.Column="3" Content="10000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_25000" Grid.Row="3" Grid.Column="3" Content="25000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_50000" Grid.Row="4" Grid.Column="3" Content="50000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_100000" Grid.Row="5" Grid.Column="3" Content="100000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_250000" Grid.Row="6" Grid.Column="3" Content="250000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_750000" Grid.Row="7" Grid.Column="3" Content="750000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_1500000" Grid.Row="8" Grid.Column="3" Content="1500000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_3000000" Grid.Row="9" Grid.Column="3" Content="3000000$" FontSize="50" HorizontalAlignment="Center"></Label>
 
         <Image Name="Image1" MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="0" Source="koffer.jpg"></Image>
         <Image Name="MeganImage" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="10" Source="megan.jpg"></Image>
