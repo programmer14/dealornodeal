@@ -22,6 +22,7 @@ namespace DealOrNoDeal
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private List<int> list;
+        private bool Easteregg = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -110,6 +111,14 @@ namespace DealOrNoDeal
                 }
             }else
             {
+                if (list.FirstOrDefault() == 3000000)
+                {
+                    Easteregg = true;
+                }else
+                {
+                    Easteregg = false;
+                }
+                Easteregg = true;
                 MeganImage.Visibility = Visibility.Visible;
                 EndKImage.Visibility = Visibility.Visible;
                 LabelEnd.Content = list.FirstOrDefault();
