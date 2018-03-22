@@ -24,6 +24,7 @@ namespace DealOrNoDeal
         private List<int> list;
         private int round;
         private int casevalue;
+        private int EastereggCounter = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace DealOrNoDeal
             MeganImage.Visibility = Visibility.Hidden;
             EndKImage.Visibility = Visibility.Hidden;
             PlayAgBtn.Visibility = Visibility.Hidden;
+            Easti.Visibility = Visibility.Hidden;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -68,7 +70,7 @@ namespace DealOrNoDeal
 
             }
             else
-            {
+            {             
                 MeganImage.Visibility = Visibility.Visible;
                 EndKImage.Visibility = Visibility.Visible;
                 LabelEnd.Content = list.FirstOrDefault();
@@ -96,8 +98,9 @@ namespace DealOrNoDeal
 
                 Image20.Visibility = Visibility.Hidden;
             }
-
+           
         }
+
         private void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
@@ -108,6 +111,16 @@ namespace DealOrNoDeal
             var mw = new MainWindow();
             mw.Show();
             this.Close();
+        }
+
+        private void Label_3000000_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            EastereggCounter = EastereggCounter + 1;
+            if (EastereggCounter == 7)
+            {
+                Easti.Visibility = Visibility.Visible;
+                gridMain.ShowGridLines = false;
+            }
         }
     }
 }
