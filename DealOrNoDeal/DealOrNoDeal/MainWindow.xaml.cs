@@ -42,35 +42,35 @@ namespace DealOrNoDeal
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (round < 20)
+
+            var rnd = new Random();
+            list = list.OrderBy(a => rnd.Next()).ToList();
+            var zahl = list.FirstOrDefault();
+            list.Remove(zahl);
+
+
+            if (round == 1)
             {
-                var rnd = new Random();
-                list = list.OrderBy(a => rnd.Next()).ToList();
-                var zahl = list.FirstOrDefault();
-                list.Remove(zahl);
-                if (round == 1)
-                {
-                    //Save Choosen Case
-                    casevalue = zahl;
-                    //Change Image
-                    var bild = (Image)sender;
-                    bild.Source = new BitmapImage(new Uri(@"kofferChoosen.png", UriKind.RelativeOrAbsolute));
-                }
-                else
-                {
-                    Label lb = (Label)FindName("Label_" + zahl);
-                    lb.Foreground = Brushes.Red;
-                    var bild = (Image)sender;
-                    bild.Visibility = Visibility.Hidden;
-                }
-
+                //Save Choosen Case
+                casevalue = zahl;
+                //Change Image
+                var bild = (Image)sender;
+                bild.Source = new BitmapImage(new Uri(@"kofferChoosen.png", UriKind.RelativeOrAbsolute));
+                bild.IsEnabled = false;
                 round++;
-
-                       
-
             }
             else
-            {             
+            {
+
+                Label lb = (Label)FindName("Label_" + zahl);
+                lb.Foreground = Brushes.Red;
+                var bild = (Image)sender;
+                bild.Visibility = Visibility.Hidden;
+            }
+
+            if(list.Count == 1)
+            {
+                /*TODO Choose Case last 2 */
                 MeganImage.Visibility = Visibility.Visible;
                 EndKImage.Visibility = Visibility.Visible;
                 LabelEnd.Content = list.FirstOrDefault();
@@ -95,10 +95,10 @@ namespace DealOrNoDeal
                 Image17.Visibility = Visibility.Hidden;
                 Image18.Visibility = Visibility.Hidden;
                 Image19.Visibility = Visibility.Hidden;
-
                 Image20.Visibility = Visibility.Hidden;
             }
-           
+
+
         }
 
         private void OnPropertyChanged(string name)
