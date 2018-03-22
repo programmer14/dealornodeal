@@ -22,10 +22,14 @@ namespace DealOrNoDeal
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private List<int> list;
+        private int round;
+        private int casevalue;
         public MainWindow()
         {
             InitializeComponent();
             DataContext = this;
+            round = 1;
+            casevalue = 0;
             list = new List<int>() { 1, 5, 10, 50, 100, 200, 350, 500, 1000, 1500, 2500, 4000, 10000, 25000, 50000, 100000, 250000, 750000, 1500000, 3000000 };
             MeganImage.Visibility = Visibility.Hidden;
             EndKImage.Visibility = Visibility.Hidden;
@@ -36,18 +40,31 @@ namespace DealOrNoDeal
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (list.Count >= 2)
+            if (round < 20)
             {
-                var bild = (Image)sender;
-                bild.Visibility = Visibility.Hidden;
-
                 var rnd = new Random();
                 list = list.OrderBy(a => rnd.Next()).ToList();
                 var zahl = list.FirstOrDefault();
                 list.Remove(zahl);
+                if (round == 1)
+                {
+                    //Save Choosen Case
+                    casevalue = zahl;
+                    //Change Image
+                    var bild = (Image)sender;
+                    bild.Source = new BitmapImage(new Uri(@"kofferChoosen.png", UriKind.RelativeOrAbsolute));
+                }
+                else
+                {
+                    Label lb = (Label)FindName("Label_" + zahl);
+                    lb.Foreground = Brushes.Red;
+                    var bild = (Image)sender;
+                    bild.Visibility = Visibility.Hidden;
+                }
 
-                Label lb = (Label)FindName("Label_" + zahl);
-                lb.Foreground = Brushes.Red;
+                round++;
+
+                       
 
             }
             else
