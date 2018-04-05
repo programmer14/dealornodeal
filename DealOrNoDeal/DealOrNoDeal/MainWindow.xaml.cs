@@ -24,7 +24,6 @@ namespace DealOrNoDeal
         private List<int> list;
         private int round;
         private int casevalue;
-        private int EastereggCounter = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,7 +34,10 @@ namespace DealOrNoDeal
             MeganImage.Visibility = Visibility.Hidden;
             EndKImage.Visibility = Visibility.Hidden;
             PlayAgBtn.Visibility = Visibility.Hidden;
-            Easti.Visibility = Visibility.Hidden;
+            ImageLeftChoose.Visibility = Visibility.Hidden;
+            ImageRightChoose.Visibility = Visibility.Hidden;
+            LabelLeftChoose.Visibility = Visibility.Hidden;
+            LabelRightChoose.Visibility = Visibility.Hidden;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -71,11 +73,6 @@ namespace DealOrNoDeal
             if(list.Count == 1)
             {
                 /*TODO Choose Case last 2 */
-                MeganImage.Visibility = Visibility.Visible;
-                EndKImage.Visibility = Visibility.Visible;
-                LabelEnd.Content = list.FirstOrDefault();
-                gridMain.ShowGridLines = false;
-                PlayAgBtn.Visibility = Visibility.Visible;
                 Image1.Visibility = Visibility.Hidden;
                 Image2.Visibility = Visibility.Hidden;
                 Image3.Visibility = Visibility.Hidden;
@@ -96,6 +93,31 @@ namespace DealOrNoDeal
                 Image18.Visibility = Visibility.Hidden;
                 Image19.Visibility = Visibility.Hidden;
                 Image20.Visibility = Visibility.Hidden;
+
+
+                ImageLeftChoose.Visibility = Visibility.Visible;
+                ImageRightChoose.Visibility = Visibility.Visible;
+
+
+                //Positioning Values Random
+                Random r = new Random();
+                int random = r.Next(1, 3);
+                if(random == 1)
+                {
+                    LabelLeftChoose.Content = casevalue + "$";
+                    LabelRightChoose.Content = list[0] + "$";
+                }
+                else
+                {
+                    LabelLeftChoose.Content = list[0] + "$";
+                    LabelRightChoose.Content = casevalue + "$";
+                }
+                
+
+                LabelLeftChoose.Visibility = Visibility.Visible;
+                LabelRightChoose.Visibility = Visibility.Visible;
+                
+                
             }
 
 
@@ -113,14 +135,34 @@ namespace DealOrNoDeal
             this.Close();
         }
 
-        private void Label_3000000_MouseDown(object sender, MouseButtonEventArgs e)
+        private void ChooseLastCase(object sender, MouseButtonEventArgs e)
         {
-            EastereggCounter = EastereggCounter + 1;
-            if (EastereggCounter == 7)
-            {
-                Easti.Visibility = Visibility.Visible;
-                gridMain.ShowGridLines = false;
-            }
+            /* Show Win */
+            ImageLeftChoose.Visibility = Visibility.Hidden;
+            ImageRightChoose.Visibility = Visibility.Hidden;
+            LabelLeftChoose.Visibility = Visibility.Hidden;
+            LabelRightChoose.Visibility = Visibility.Hidden;
+
+            MeganImage.Visibility = Visibility.Visible;
+            EndKImage.Visibility = Visibility.Visible;
+            LabelEnd.Content = casevalue + "$";
+            gridMain.ShowGridLines = false;
+            PlayAgBtn.Visibility = Visibility.Visible;
+        }
+
+        private void ChooseLastList(object sender, MouseButtonEventArgs e)
+        {
+            /* Show Win */
+            ImageLeftChoose.Visibility = Visibility.Hidden;
+            ImageRightChoose.Visibility = Visibility.Hidden;
+            LabelLeftChoose.Visibility = Visibility.Hidden;
+            LabelRightChoose.Visibility = Visibility.Hidden;
+
+            MeganImage.Visibility = Visibility.Visible;
+            EndKImage.Visibility = Visibility.Visible;
+            LabelEnd.Content = list[0] + "$";
+            gridMain.ShowGridLines = false;
+            PlayAgBtn.Visibility = Visibility.Visible;
         }
     }
 }

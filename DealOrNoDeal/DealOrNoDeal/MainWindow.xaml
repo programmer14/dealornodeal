@@ -44,7 +44,7 @@
         <Label Name="Label_250000" Grid.Row="6" Grid.Column="3" Content="250000$" FontSize="50" HorizontalAlignment="Center"></Label>
         <Label Name="Label_750000" Grid.Row="7" Grid.Column="3" Content="750000$" FontSize="50" HorizontalAlignment="Center"></Label>
         <Label Name="Label_1500000" Grid.Row="8" Grid.Column="3" Content="1500000$" FontSize="50" HorizontalAlignment="Center"></Label>
-        <Label Name="Label_3000000" MouseDown="Label_3000000_MouseDown" Grid.Row="9" Grid.Column="3" Content="3000000$" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="Label_3000000" Grid.Row="9" Grid.Column="3" Content="3000000$" FontSize="50" HorizontalAlignment="Center"></Label>
 
         <Image Name="Image1" MouseDown="Image_MouseDown" Grid.Column="1" Grid.Row="0" Source="koffer.jpg"></Image>
         <Image Name="MeganImage" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="10" Source="megan.jpg"></Image>
@@ -70,6 +70,13 @@
         <Image Name="Image19" MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="8" Source="koffer.jpg" ></Image>
         <Image Name="Image20" MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="9" Source="koffer.jpg"></Image>
         <Button Click="PlayAgBtn_Click" Name="PlayAgBtn" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="9" Width="200" Height="50" Content="Play Again" FontSize="25" ></Button>
-        <Image Name="Easti" Source="easteregg2.jpeg" Grid.ColumnSpan="4" Grid.RowSpan="10"></Image>
+
+
+        <!--Final Choose-->
+        <Image Name="ImageLeftChoose" MouseDown="ChooseLastCase" Grid.Column="1" Grid.Row="5" Source="kofferChoosen.png" ></Image>
+        <Image Name="ImageRightChoose" MouseDown="ChooseLastList" Grid.Column="2" Grid.Row="5" Source="koffer.jpg"></Image>
+        <Label Name="LabelLeftChoose" Grid.Row="6" Grid.Column="1" Content="" FontSize="50" HorizontalAlignment="Center"></Label>
+        <Label Name="LabelRightChoose" Grid.Row="6" Grid.Column="2" Content="" FontSize="50" HorizontalAlignment="Center"></Label>
+
     </Grid>
 </Window>
