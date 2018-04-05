@@ -123,6 +123,13 @@ namespace DealOrNoDeal
 
         }
 
+        private void Angebot()
+        {
+            var angebot = new Angebot();
+            angebot.ShowDialog();
+            
+        }
+
         private void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
