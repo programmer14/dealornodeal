@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DealOrNoDeal"
         mc:Ignorable="d"
         Title="MainWindow" WindowStartupLocation="CenterScreen" Height="800" Width="1100">
-    <Grid Name="gridMain" Background="White" ShowGridLines="False">
+    <Grid Name="gridMain" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"/>
@@ -70,7 +70,8 @@
         <Image Name="Image19" MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="8" Source="koffer.jpg" ></Image>
         <Image Name="Image20" MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="9" Source="koffer.jpg"></Image>
         <Button Click="PlayAgBtn_Click" Name="PlayAgBtn" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="9" Width="200" Height="50" Content="Play Again" FontSize="25" ></Button>
-        
+        <Button Click="ShowScoreBtn_Click" Name="ShowScoreBtn" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="8" Width="200" Height="50" Content="Highscore" FontSize="25" ></Button>
+
 
         <!--Final Choose-->
         <Image Name="ImageLeftChoose" MouseDown="ChooseLastCase" Grid.Column="1" Grid.Row="5" Source="kofferChoosen.png" ></Image>

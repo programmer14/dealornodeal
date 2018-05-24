@@ -36,6 +36,7 @@ namespace DealOrNoDeal
             MeganImage.Visibility = Visibility.Hidden;
             EndKImage.Visibility = Visibility.Hidden;
             PlayAgBtn.Visibility = Visibility.Hidden;
+            ShowScoreBtn.Visibility = Visibility.Hidden;
             ImageLeftChoose.Visibility = Visibility.Hidden;
             ImageRightChoose.Visibility = Visibility.Hidden;
             LabelLeftChoose.Visibility = Visibility.Hidden;
@@ -217,8 +218,9 @@ namespace DealOrNoDeal
             MeganImage.Visibility = Visibility.Visible;
             EndKImage.Visibility = Visibility.Visible;
             LabelEnd.Content = casevalue + "$";
-            gridMain.ShowGridLines = false;
             PlayAgBtn.Visibility = Visibility.Visible;
+            ShowScoreBtn.Visibility = Visibility.Visible;
+            SaveScore(casevalue);
         }
 
         private void ChooseLastList(object sender, MouseButtonEventArgs e)
@@ -232,20 +234,39 @@ namespace DealOrNoDeal
             MeganImage.Visibility = Visibility.Visible;
             EndKImage.Visibility = Visibility.Visible;
             LabelEnd.Content = list[0] + "$";
-            gridMain.ShowGridLines = false;
             PlayAgBtn.Visibility = Visibility.Visible;
+            ShowScoreBtn.Visibility = Visibility.Visible;
+            SaveScore(list[0]);
         }
 
         private void ChooseDialogOffer()
         {
             /* Show Win */
+            hideAllLablesAndPictures();
             MeganImage.Visibility = Visibility.Visible;
             EndKImage.Visibility = Visibility.Visible;
             LabelEnd.Content = casevalue + "$";
-            gridMain.ShowGridLines = false;
             PlayAgBtn.Visibility = Visibility.Visible;
+            ShowScoreBtn.Visibility = Visibility.Visible;
+            SaveScore(casevalue);
         }
 
+        private void SaveScore(int endvalue)
+        {
+            if (endvalue >= Properties.Settings.Default.ErsterScore)
+            {
+                Properties.Settings.Default.ErsterScore = endvalue;
+            }
+            else if (endvalue >= Properties.Settings.Default.ZweiterScore)
+            {
+                Properties.Settings.Default.ZweiterScore = endvalue;
+            }
+            else if (endvalue >= Properties.Settings.Default.DritterScore)
+            {
+                Properties.Settings.Default.DritterScore = endvalue;
+            }
+            Properties.Settings.Default.Save();
+        }
         private void hideAllLablesAndPictures()
         {
             Image1.Visibility = Visibility.Hidden;
@@ -369,6 +390,12 @@ namespace DealOrNoDeal
             Label_1500000.Visibility = Visibility.Visible;
             Label_3000000.Visibility = Visibility.Visible;
 
+        }
+
+        private void ShowScoreBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var scoreview = new Score();
+            scoreview.ShowDialog();
         }
     }
 }
