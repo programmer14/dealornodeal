@@ -163,8 +163,7 @@ namespace DealOrNoDeal
             if (list.Count == 1)
             {
 
-                hideAllPictures();
-
+                hideAllLablesAndPictures();
 
                 ImageLeftChoose.Visibility = Visibility.Visible;
                 ImageRightChoose.Visibility = Visibility.Visible;
@@ -217,7 +216,6 @@ namespace DealOrNoDeal
 
             MeganImage.Visibility = Visibility.Visible;
             EndKImage.Visibility = Visibility.Visible;
-            hideAllLables();
             LabelEnd.Content = casevalue + "$";
             gridMain.ShowGridLines = false;
             PlayAgBtn.Visibility = Visibility.Visible;
@@ -233,7 +231,6 @@ namespace DealOrNoDeal
 
             MeganImage.Visibility = Visibility.Visible;
             EndKImage.Visibility = Visibility.Visible;
-            hideAllLables();
             LabelEnd.Content = list[0] + "$";
             gridMain.ShowGridLines = false;
             PlayAgBtn.Visibility = Visibility.Visible;
@@ -244,7 +241,6 @@ namespace DealOrNoDeal
             /* Show Win */
             MeganImage.Visibility = Visibility.Visible;
             EndKImage.Visibility = Visibility.Visible;
-            hideAllLablesAndPictures();
             LabelEnd.Content = casevalue + "$";
             gridMain.ShowGridLines = false;
             PlayAgBtn.Visibility = Visibility.Visible;

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DealOrNoDeal"
         mc:Ignorable="d"
         Title="MainWindow" WindowStartupLocation="CenterScreen" Height="800" Width="1100">
-    <Grid Name="gridMain" Background="White" ShowGridLines="True">
+    <Grid Name="gridMain" Background="White" ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"/>
