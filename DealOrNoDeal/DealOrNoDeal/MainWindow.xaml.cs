@@ -24,6 +24,8 @@ namespace DealOrNoDeal
         private List<int> list;
         private int round;
         private int casevalue;
+        public static Boolean HasAccepted = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -59,7 +61,7 @@ namespace DealOrNoDeal
                 var bild = (Image)sender;
                 bild.Source = new BitmapImage(new Uri(@"kofferChoosen.png", UriKind.RelativeOrAbsolute));
                 bild.IsEnabled = false;
-                round++;
+                
             }
             else
             {
@@ -68,31 +70,100 @@ namespace DealOrNoDeal
                 lb.Foreground = Brushes.Red;
                 var bild = (Image)sender;
                 bild.Visibility = Visibility.Hidden;
+
+                if (round == 5)
+                {
+
+                    var value = 0;
+
+                    value += casevalue;
+
+                    foreach (var l in list)
+                    {
+                        value += l;
+                    }
+
+                    value = value / (list.Count + 1);
+
+                    var dialog = new Dialog(value);
+                    dialog.ShowDialog();
+
+                    if (HasAccepted)
+                    {
+                        casevalue = value;
+                        ChooseDialogOffer();
+
+
+                    }
+
+
+                }
+
+                if (round == 10)
+                {
+
+                    var value = 0;
+
+                    value += casevalue;
+
+                    foreach (var l in list)
+                    {
+                        value += l;
+                    }
+
+                    value = value / (list.Count + 1);
+
+                    var dialog = new Dialog(value);
+                    dialog.ShowDialog();
+
+                    if (HasAccepted)
+                    {
+                        casevalue = value;
+                        ChooseDialogOffer();
+
+
+                    }
+
+
+                }
+
+                if (round == 15)
+                {
+
+                    var value = 0;
+
+                    value += casevalue;
+
+                    foreach (var l in list)
+                    {
+                        value += l;
+                    }
+
+                    value = value / (list.Count + 1);
+
+                    var dialog = new Dialog(value);
+                    dialog.ShowDialog();
+
+                    if (HasAccepted)
+                    {
+                        casevalue = value;
+                        ChooseDialogOffer();
+
+
+                    }
+
+
+                }
+
             }
 
-            if(list.Count == 1)
+            //Runden zähler
+            round++;
+
+            if (list.Count == 1)
             {
-                /*TODO Choose Case last 2 */
-                Image1.Visibility = Visibility.Hidden;
-                Image2.Visibility = Visibility.Hidden;
-                Image3.Visibility = Visibility.Hidden;
-                Image4.Visibility = Visibility.Hidden;
-                Image5.Visibility = Visibility.Hidden;
-                Image6.Visibility = Visibility.Hidden;
-                Image7.Visibility = Visibility.Hidden;
-                Image8.Visibility = Visibility.Hidden;
-                Image9.Visibility = Visibility.Hidden;
-                Image10.Visibility = Visibility.Hidden;
-                Image11.Visibility = Visibility.Hidden;
-                Image12.Visibility = Visibility.Hidden;
-                Image13.Visibility = Visibility.Hidden;
-                Image14.Visibility = Visibility.Hidden;
-                Image15.Visibility = Visibility.Hidden;
-                Image16.Visibility = Visibility.Hidden;
-                Image17.Visibility = Visibility.Hidden;
-                Image18.Visibility = Visibility.Hidden;
-                Image19.Visibility = Visibility.Hidden;
-                Image20.Visibility = Visibility.Hidden;
+
+                hideAllPictures();
 
 
                 ImageLeftChoose.Visibility = Visibility.Visible;
@@ -123,12 +194,6 @@ namespace DealOrNoDeal
 
         }
 
-        private void Angebot()
-        {
-            var angebot = new Angebot();
-            angebot.ShowDialog();
-            
-        }
 
         private void OnPropertyChanged(string name)
         {
@@ -152,6 +217,7 @@ namespace DealOrNoDeal
 
             MeganImage.Visibility = Visibility.Visible;
             EndKImage.Visibility = Visibility.Visible;
+            hideAllLables();
             LabelEnd.Content = casevalue + "$";
             gridMain.ShowGridLines = false;
             PlayAgBtn.Visibility = Visibility.Visible;
@@ -167,9 +233,146 @@ namespace DealOrNoDeal
 
             MeganImage.Visibility = Visibility.Visible;
             EndKImage.Visibility = Visibility.Visible;
+            hideAllLables();
             LabelEnd.Content = list[0] + "$";
             gridMain.ShowGridLines = false;
             PlayAgBtn.Visibility = Visibility.Visible;
+        }
+
+        private void ChooseDialogOffer()
+        {
+            /* Show Win */
+            MeganImage.Visibility = Visibility.Visible;
+            EndKImage.Visibility = Visibility.Visible;
+            hideAllLablesAndPictures();
+            LabelEnd.Content = casevalue + "$";
+            gridMain.ShowGridLines = false;
+            PlayAgBtn.Visibility = Visibility.Visible;
+        }
+
+        private void hideAllLablesAndPictures()
+        {
+            Image1.Visibility = Visibility.Hidden;
+            Image2.Visibility = Visibility.Hidden;
+            Image3.Visibility = Visibility.Hidden;
+            Image4.Visibility = Visibility.Hidden;
+            Image5.Visibility = Visibility.Hidden;
+            Image6.Visibility = Visibility.Hidden;
+            Image7.Visibility = Visibility.Hidden;
+            Image8.Visibility = Visibility.Hidden;
+            Image9.Visibility = Visibility.Hidden;
+            Image10.Visibility = Visibility.Hidden;
+            Image11.Visibility = Visibility.Hidden;
+            Image12.Visibility = Visibility.Hidden;
+            Image13.Visibility = Visibility.Hidden;
+            Image14.Visibility = Visibility.Hidden;
+            Image15.Visibility = Visibility.Hidden;
+            Image16.Visibility = Visibility.Hidden;
+            Image17.Visibility = Visibility.Hidden;
+            Image18.Visibility = Visibility.Hidden;
+            Image19.Visibility = Visibility.Hidden;
+            Image20.Visibility = Visibility.Hidden;
+
+            
+            Label_1.Visibility = Visibility.Hidden;
+            Label_5.Visibility = Visibility.Hidden;
+            Label_10.Visibility = Visibility.Hidden;
+            Label_50.Visibility = Visibility.Hidden;
+            Label_100.Visibility = Visibility.Hidden;
+            Label_200.Visibility = Visibility.Hidden;
+            Label_350.Visibility = Visibility.Hidden;
+            Label_500.Visibility = Visibility.Hidden;
+            Label_1000.Visibility = Visibility.Hidden;
+            Label_1500.Visibility = Visibility.Hidden;
+            Label_2500.Visibility = Visibility.Hidden;
+            Label_4000.Visibility = Visibility.Hidden;
+            Label_10000.Visibility = Visibility.Hidden;
+            Label_25000.Visibility = Visibility.Hidden;
+            Label_50000.Visibility = Visibility.Hidden;
+            Label_100000.Visibility = Visibility.Hidden;
+            Label_250000.Visibility = Visibility.Hidden;
+            Label_750000.Visibility = Visibility.Hidden;
+            Label_1500000.Visibility = Visibility.Hidden;
+            Label_3000000.Visibility = Visibility.Hidden;
+
+        }
+
+        private void hideAllPictures()
+        {
+            Image1.Visibility = Visibility.Hidden;
+            Image2.Visibility = Visibility.Hidden;
+            Image3.Visibility = Visibility.Hidden;
+            Image4.Visibility = Visibility.Hidden;
+            Image5.Visibility = Visibility.Hidden;
+            Image6.Visibility = Visibility.Hidden;
+            Image7.Visibility = Visibility.Hidden;
+            Image8.Visibility = Visibility.Hidden;
+            Image9.Visibility = Visibility.Hidden;
+            Image10.Visibility = Visibility.Hidden;
+            Image11.Visibility = Visibility.Hidden;
+            Image12.Visibility = Visibility.Hidden;
+            Image13.Visibility = Visibility.Hidden;
+            Image14.Visibility = Visibility.Hidden;
+            Image15.Visibility = Visibility.Hidden;
+            Image16.Visibility = Visibility.Hidden;
+            Image17.Visibility = Visibility.Hidden;
+            Image18.Visibility = Visibility.Hidden;
+            Image19.Visibility = Visibility.Hidden;
+            Image20.Visibility = Visibility.Hidden;
+
+
+        }
+
+        private void hideAllLables()
+        {
+
+            Label_1.Visibility = Visibility.Hidden;
+            Label_5.Visibility = Visibility.Hidden;
+            Label_10.Visibility = Visibility.Hidden;
+            Label_50.Visibility = Visibility.Hidden;
+            Label_100.Visibility = Visibility.Hidden;
+            Label_200.Visibility = Visibility.Hidden;
+            Label_350.Visibility = Visibility.Hidden;
+            Label_500.Visibility = Visibility.Hidden;
+            Label_1000.Visibility = Visibility.Hidden;
+            Label_1500.Visibility = Visibility.Hidden;
+            Label_2500.Visibility = Visibility.Hidden;
+            Label_4000.Visibility = Visibility.Hidden;
+            Label_10000.Visibility = Visibility.Hidden;
+            Label_25000.Visibility = Visibility.Hidden;
+            Label_50000.Visibility = Visibility.Hidden;
+            Label_100000.Visibility = Visibility.Hidden;
+            Label_250000.Visibility = Visibility.Hidden;
+            Label_750000.Visibility = Visibility.Hidden;
+            Label_1500000.Visibility = Visibility.Hidden;
+            Label_3000000.Visibility = Visibility.Hidden;
+
+        }
+
+        private void showAllLables()
+        {
+
+            Label_1.Visibility = Visibility.Visible;
+            Label_5.Visibility = Visibility.Visible;
+            Label_10.Visibility = Visibility.Visible;
+            Label_50.Visibility = Visibility.Visible;
+            Label_100.Visibility = Visibility.Visible;
+            Label_200.Visibility = Visibility.Visible;
+            Label_350.Visibility = Visibility.Visible;
+            Label_500.Visibility = Visibility.Visible;
+            Label_1000.Visibility = Visibility.Visible;
+            Label_1500.Visibility = Visibility.Visible;
+            Label_2500.Visibility = Visibility.Visible;
+            Label_4000.Visibility = Visibility.Visible;
+            Label_10000.Visibility = Visibility.Visible;
+            Label_25000.Visibility = Visibility.Visible;
+            Label_50000.Visibility = Visibility.Visible;
+            Label_100000.Visibility = Visibility.Visible;
+            Label_250000.Visibility = Visibility.Visible;
+            Label_750000.Visibility = Visibility.Visible;
+            Label_1500000.Visibility = Visibility.Visible;
+            Label_3000000.Visibility = Visibility.Visible;
+
         }
     }
 }

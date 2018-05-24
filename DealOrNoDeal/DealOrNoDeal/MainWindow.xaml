@@ -70,7 +70,7 @@
         <Image Name="Image19" MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="8" Source="koffer.jpg" ></Image>
         <Image Name="Image20" MouseDown="Image_MouseDown" Grid.Column="2" Grid.Row="9" Source="koffer.jpg"></Image>
         <Button Click="PlayAgBtn_Click" Name="PlayAgBtn" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="9" Width="200" Height="50" Content="Play Again" FontSize="25" ></Button>
-
+        
 
         <!--Final Choose-->
         <Image Name="ImageLeftChoose" MouseDown="ChooseLastCase" Grid.Column="1" Grid.Row="5" Source="kofferChoosen.png" ></Image>
