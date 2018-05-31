@@ -5,14 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DealOrNoDeal"
         mc:Ignorable="d"
-        Title="Score" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+        Title="Score" Height="400" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label FontSize="20" Content="Highscores" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"></Label>
-        <DataGrid VerticalAlignment="Center" ItemsSource="{Binding ScoreList}" AutoGenerateColumns="False" IsReadOnly="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="Name" FontSize="20" HorizontalAlignment="Center" Height="40" VerticalAlignment="Top"  ></Label>
+        <TextBox x:Name="TxtBoxName" HorizontalAlignment="Center" Height="23" Margin="40" TextChanged="TxtBoxName_TextChanged" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="SaveScoreBtn" IsEnabled="False" Click="SaveScoreBtn_Click" Width="150" Height="30" Content="Save Score" Margin="0,75,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" ></Button>
+        <Label Name="ScoreLabel" VerticalAlignment="Bottom" Margin="0,0,0,40" Content="" FontSize="18" HorizontalAlignment="Center"></Label>
+        <Label FontSize="20" Content="Highscores" HorizontalAlignment="Center" VerticalAlignment="Bottom" ></Label>
+        <DataGrid VerticalAlignment="Top" Grid.Row="1" ItemsSource="{Binding ScoreList}" AutoGenerateColumns="False" Margin="10" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Place" Width="*" Binding="{Binding Place}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Score" Width="*" Binding="{Binding Score}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
+
     </Grid>
 </Window>

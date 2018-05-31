@@ -58,5 +58,41 @@ namespace DealOrNoDeal.Properties {
                 this["DritterScore"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ErsterName {
+            get {
+                return ((string)(this["ErsterName"]));
+            }
+            set {
+                this["ErsterName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ZweiterName {
+            get {
+                return ((string)(this["ZweiterName"]));
+            }
+            set {
+                this["ZweiterName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DriterName {
+            get {
+                return ((string)(this["DriterName"]));
+            }
+            set {
+                this["DriterName"] = value;
+            }
+        }
     }
 }

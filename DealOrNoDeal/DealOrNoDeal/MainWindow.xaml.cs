@@ -21,6 +21,7 @@ namespace DealOrNoDeal
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        private int endValue = 0;
         private List<int> list;
         private int round;
         private int casevalue;
@@ -220,7 +221,7 @@ namespace DealOrNoDeal
             LabelEnd.Content = casevalue + "$";
             PlayAgBtn.Visibility = Visibility.Visible;
             ShowScoreBtn.Visibility = Visibility.Visible;
-            SaveScore(casevalue);
+            endValue = casevalue;
         }
 
         private void ChooseLastList(object sender, MouseButtonEventArgs e)
@@ -236,7 +237,7 @@ namespace DealOrNoDeal
             LabelEnd.Content = list[0] + "$";
             PlayAgBtn.Visibility = Visibility.Visible;
             ShowScoreBtn.Visibility = Visibility.Visible;
-            SaveScore(list[0]);
+            endValue = list[0];
         }
 
         private void ChooseDialogOffer()
@@ -247,26 +248,10 @@ namespace DealOrNoDeal
             EndKImage.Visibility = Visibility.Visible;
             LabelEnd.Content = casevalue + "$";
             PlayAgBtn.Visibility = Visibility.Visible;
+            endValue = casevalue;
             ShowScoreBtn.Visibility = Visibility.Visible;
-            SaveScore(casevalue);
         }
 
-        private void SaveScore(int endvalue)
-        {
-            if (endvalue >= Properties.Settings.Default.ErsterScore)
-            {
-                Properties.Settings.Default.ErsterScore = endvalue;
-            }
-            else if (endvalue >= Properties.Settings.Default.ZweiterScore)
-            {
-                Properties.Settings.Default.ZweiterScore = endvalue;
-            }
-            else if (endvalue >= Properties.Settings.Default.DritterScore)
-            {
-                Properties.Settings.Default.DritterScore = endvalue;
-            }
-            Properties.Settings.Default.Save();
-        }
         private void hideAllLablesAndPictures()
         {
             Image1.Visibility = Visibility.Hidden;
@@ -394,7 +379,7 @@ namespace DealOrNoDeal
 
         private void ShowScoreBtn_Click(object sender, RoutedEventArgs e)
         {
-            var scoreview = new Score();
+            var scoreview = new Score(endValue);
             scoreview.ShowDialog();
         }
     }
