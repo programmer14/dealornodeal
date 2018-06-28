@@ -203,6 +203,9 @@ namespace DealOrNoDeal
 
         private void PlayAgBtn_Click(object sender, RoutedEventArgs e)
         {
+
+            Properties.Settings.Default.AlreadySaved = false;
+            Properties.Settings.Default.Save();
             var mw = new MainWindow();
             mw.Show();
             this.Close();
@@ -381,6 +384,7 @@ namespace DealOrNoDeal
         {
             var scoreview = new Score(endValue);
             scoreview.ShowDialog();
+            
         }
     }
 }

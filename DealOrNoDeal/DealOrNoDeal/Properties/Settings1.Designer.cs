@@ -94,5 +94,17 @@ namespace DealOrNoDeal.Properties {
                 this["DriterName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AlreadySaved {
+            get {
+                return ((bool)(this["AlreadySaved"]));
+            }
+            set {
+                this["AlreadySaved"] = value;
+            }
+        }
     }
 }
