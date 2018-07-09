@@ -111,19 +111,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="koffer.jpg" />
+    <Resource Include="kofferEnd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="kofferEnd.png" />
+    <Resource Include="kofferChoosen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="test.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="kofferChoosen.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="megan.jpg" />
+    <Resource Include="offer.png" />
+    <Resource Include="background.jpg" />
+    <Content Include="koffer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="megan.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

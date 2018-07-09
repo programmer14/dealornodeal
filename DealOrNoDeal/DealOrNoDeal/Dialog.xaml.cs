@@ -25,7 +25,7 @@ namespace DealOrNoDeal
             
             InitializeComponent();
 
-            textBlock.Text = "Möchten Sie das Angebot von " + value + " annehmen";
+            textBlock.Text = "Möchten Sie das Angebot von " + value + " annehmen?";
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

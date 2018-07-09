@@ -30,6 +30,8 @@ namespace DealOrNoDeal
         public MainWindow()
         {
             InitializeComponent();
+            Properties.Settings.Default.AlreadySaved = false;
+            Properties.Settings.Default.Save();
             DataContext = this;
             round = 1;
             casevalue = 0;
@@ -219,7 +221,13 @@ namespace DealOrNoDeal
             LabelLeftChoose.Visibility = Visibility.Hidden;
             LabelRightChoose.Visibility = Visibility.Hidden;
 
-            MeganImage.Visibility = Visibility.Visible;
+            //MeganImage.Visibility = Visibility.Visible;
+            ImageBrush myBrush = new ImageBrush();
+            Image image = new Image();
+            image.Source = new BitmapImage(new Uri(@"megan.jpg", UriKind.RelativeOrAbsolute));
+            myBrush.ImageSource = image.Source;
+            Grid grid = (Grid)FindName("gridMain");
+            grid.Background = myBrush;
             EndKImage.Visibility = Visibility.Visible;
             LabelEnd.Content = casevalue + "$";
             PlayAgBtn.Visibility = Visibility.Visible;
@@ -235,7 +243,13 @@ namespace DealOrNoDeal
             LabelLeftChoose.Visibility = Visibility.Hidden;
             LabelRightChoose.Visibility = Visibility.Hidden;
 
-            MeganImage.Visibility = Visibility.Visible;
+            //MeganImage.Visibility = Visibility.Visible;
+            ImageBrush myBrush = new ImageBrush();
+            Image image = new Image();
+            image.Source = new BitmapImage(new Uri(@"megan.jpg", UriKind.RelativeOrAbsolute));
+            myBrush.ImageSource = image.Source;
+            Grid grid = (Grid)FindName("gridMain");
+            grid.Background = myBrush;
             EndKImage.Visibility = Visibility.Visible;
             LabelEnd.Content = list[0] + "$";
             PlayAgBtn.Visibility = Visibility.Visible;
@@ -247,7 +261,13 @@ namespace DealOrNoDeal
         {
             /* Show Win */
             hideAllLablesAndPictures();
-            MeganImage.Visibility = Visibility.Visible;
+            //MeganImage.Visibility = Visibility.Visible;
+            ImageBrush myBrush = new ImageBrush();
+            Image image = new Image();
+            image.Source = new BitmapImage(new Uri(@"megan.jpg", UriKind.RelativeOrAbsolute));
+            myBrush.ImageSource = image.Source;
+            Grid grid = (Grid)FindName("gridMain");
+            grid.Background = myBrush;
             EndKImage.Visibility = Visibility.Visible;
             LabelEnd.Content = casevalue + "$";
             PlayAgBtn.Visibility = Visibility.Visible;
