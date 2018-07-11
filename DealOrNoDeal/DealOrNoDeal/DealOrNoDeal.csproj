@@ -123,6 +123,7 @@
   <ItemGroup>
     <Resource Include="offer.png" />
     <Resource Include="background.jpg" />
+    <SplashScreen Include="BullneckLogo.png" />
     <Content Include="koffer.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
